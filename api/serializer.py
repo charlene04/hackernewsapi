@@ -13,6 +13,7 @@ class itemSerializer(serializers.ModelSerializer):
         result = super(itemSerializer, self).to_representation(instance)
         return OrderedDict([(key, result[key]) for key in result if result[key] is not None])
 
+#handle posted data
 class postSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
