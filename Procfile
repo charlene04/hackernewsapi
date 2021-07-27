@@ -1,1 +1,1 @@
-web: gunicorn hackernews.wsgi --log-file –
+web: gunicorn hackernews.wsgi:application --preload --log-file –
