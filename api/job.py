@@ -22,7 +22,7 @@ def syncdbtopstories():
     else:
         data = res.read()[0:10]
     for item in data:
-        url = "https://hacker-news.firebaseio.com/v0/item/"+ str(item) +".json?print=pretty"
+        url = "https://hacker-news.firebaseio.com/v0/item/{}.json?print=pretty".format(item)
         querystring = {"print":"pretty"}
         response = requests.request("GET", url, params=querystring).json()
         stories.append(response.copy())
