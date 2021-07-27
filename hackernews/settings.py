@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-ROOT_URLCONF = 'hackernewsapi.urls'
+ROOT_URLCONF = 'hackernews.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'hackernewsapi.wsgi.application'
+WSGI_APPLICATION = 'hackernews.wsgi.application'
 CORS_ALLOW_ALL_ORIGINS=True  #for now
 
 # Database
