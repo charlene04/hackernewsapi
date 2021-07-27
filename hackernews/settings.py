@@ -90,6 +90,7 @@ CORS_ALLOW_ALL_ORIGINS=True  #for now
 #     }
 # }
 
+
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = {
