@@ -9,14 +9,11 @@ import json
 import http.client
 
 def syncdbtopstories():
-    count = Item.objects.all().values()
-    if not count:
-        count = 0
+    num = Item.objects.all().count()
     stories = []
     conn = http.client.HTTPSConnection("hacker-news.firebaseio.com")
     conn.request("GET", "/v0/topstories.json?print=pretty")
     res = conn.getresponse()
-    num = len(count)
     if num > 0:
         data = res.read()[num+1:num+11]
     else:

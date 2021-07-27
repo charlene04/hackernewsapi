@@ -80,6 +80,7 @@ CORS_ALLOW_ALL_ORIGINS=True  #for now
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# FOR LOCALHOST
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -92,12 +93,15 @@ CORS_ALLOW_ALL_ORIGINS=True  #for now
 # }
 
 
+# FOR HEROKU DEPLOYMENT
 DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
 }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
